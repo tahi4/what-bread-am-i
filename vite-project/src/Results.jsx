@@ -37,7 +37,7 @@ function Results({chosenItems}){
 let results;
     resultsData.forEach((a)=>{
 
-        if(answerSelector(countDuplicatedObjects) == `${a.breadId}`){
+        if(answerSelector(countDuplicatedObjects) == (`${a.breadId}`)){
         return results = (<div className='results--card'>
         <div className='result--text'>
         <h1 className='bread'>{a.breadName}</h1>
@@ -45,7 +45,7 @@ let results;
         </div>
         <img src={a.breadImg} />
         </div>)
-    } else if(answerSelector(countDuplicatedObjects) === false){
+    } else if(answerSelector(countDuplicatedObjects) == !(`${a.breadId}`)){
         return results = (<div className='results--card'>
         <div className='result--text'>
         <h1 className='bread'>Brown Bread</h1>

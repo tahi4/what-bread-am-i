@@ -1,4 +1,3 @@
-import { useState , useEffect} from 'react'
 import './Quiz.css'
 
 
@@ -6,7 +5,6 @@ import './Quiz.css'
 // destructred all the props, cause my code was getting repetitive
 function Quiz({quizItemId, question, chosenItems, setchosenItems, option, unansweredIds, setUnansweredIds}) {
 
-const [toggleDisabledButton, settoggleDisabledButton] = useState(false)
 
  function handleClick(e){
   
@@ -34,20 +32,7 @@ const [toggleDisabledButton, settoggleDisabledButton] = useState(false)
 //  basically disables the rest of the buttons when you select one
  const ValidPick = !unansweredIds.includes(quizItemId) && !chosenItems.includes((e) => e.currentTarget.id )
 
- useEffect(() => {
-  // ⛔️ Too many re-renders. React limits the number
-  // of renders to prevent an infinite loop.
-  if(ValidPick){
-    return settoggleDisabledButton(true)
-   }
-   
 
-}, [toggleDisabledButton])
-
-// if(ValidPick){
-//  return settoggleDisabledButton((prevState) => !prevState)
-// }
-console.log(toggleDisabledButton)
 
 return(
 <div className=''>
@@ -55,7 +40,7 @@ return(
 <h2 className='quiz--questions'  id={quizItemId}>{question}</h2>
     <div className='quiz--options'>
 
-    <button id='baguette' onClick={handleClick}  disabled={toggleDisabledButton}>{option.one}</button>
+    <button id='baguette' onClick={handleClick}  disabled={ValidPick}>{option.one}</button>
     <button id='whiteBread' onClick={handleClick} disabled={ValidPick} >{option.two}</button>
     <button id='pita' onClick={handleClick}  disabled={ValidPick}>{option.three}</button>
     <button id='bagel' onClick={handleClick}  disabled={ValidPick} >{option.four}</button>
