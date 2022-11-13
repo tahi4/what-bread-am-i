@@ -1,0 +1,30 @@
+#root {
+    max-width: 80rem;
+    margin: 0 auto;
+    padding: 2rem;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    text-align: center;
+  }
+
+  .quiz--page > button{
+
+border-radius: 0.625rem;
+background: #4D5B9E;
+color: white;
+border: none;
+padding: 0.938rem 1.875rem;
+cursor: pointer;
+
+margin-top: 2.188rem;
+font-family: Arial, Helvetica, sans-serif;
+font-size: 0.938rem;
+font-weight: 500;
+line-height: 0.75rem;
+letter-spacing: 0em;
+text-align: center;
+
+
+  }
+.quiz--page > button:disabled{
+  cursor: not-allowed;
+}

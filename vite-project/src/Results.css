@@ -1,0 +1,46 @@
+#root {
+    max-width: 80rem;
+    margin: 0 auto;
+    padding: 2rem;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    /* text-align: center; */
+    
+   
+  }
+
+.bread {
+
+font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+text-align: left;
+margin-left: 0px;
+
+}
+
+   .comment{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    text-align: left;
+    margin-left: 0px ;
+    margin-top: -0.75rem;
+  }
+
+  .results--card{
+    box-shadow: 0px 2px 3px 0px #00000040;
+    max-width: 31.25rem;
+    margin: auto;
+    margin-top: 1.25rem;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 0.75rem;
+    border-radius: 0.5rem;
+    background-color: white;
+
+  }
+
+
+  img{
+
+    margin: auto;
+    margin-right: 0px;
+    margin-left: 0.438rem;
+  }
+
