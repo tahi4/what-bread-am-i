@@ -13,7 +13,7 @@ function Quizpage({unansweredIds, setUnansweredIds}){
 
      //  the button stays disabled until you answer all questions 
     const [showResult , setShowResult] = useState(false)
-    function disableResultButton(){ setShowResult(true) }
+    function resultButton(){ setShowResult(true) }
     
     // mapping props into the quiz component
 
@@ -55,7 +55,7 @@ console.log(unansweredIds.length)
 
         <section>{quizzie}</section>
         
-        <button onClick={disableResultButton} disabled={!showResult && unansweredIds.length}>{showResult && !unansweredIds.length ? "Results are in! 🥁" : "I'm prepared to be cussed out 😨"}</button>
+        <button onClick={resultButton} disabled={!showResult && unansweredIds.length}>{showResult && !unansweredIds.length ? "Results are in! 🥁" : "I'm prepared to be cussed out 😨"}</button>
         <div>
         {/*  shows result component only when you press the button */}
       { showResult && !unansweredIds.length ? <Results chosenItems={chosenItems} /> : null }
