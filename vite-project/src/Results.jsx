@@ -2,7 +2,7 @@ import './Results.css'
 import resultsData from './resultsData'
 import brownbreadImg from './assets/image 5.png'
 
-// count was the only parameter i needed from the QuizPage
+// chosenItems was the only parameter i needed from the QuizPage
 
 function Results({chosenItems}){
   
